@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minesweeper Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="initGame()">
+    <img class="logo" src="img/logo.png"><br />
+    <div class="dashboard"><button onclick="setLevel(4)">Beginner</button></div>
+    <div class="dashboard"><button onclick="setLevel(8)">Medium</button></div>
+    <div class="dashboard"><button onclick="setLevel(12)">Expert</button></div> <br />
+    <div class="dashboard flags">Flags: <span></span></div>
+    <div class="dashboard smile">Smile <span></span></div>
+    <div class="dashboard lifes">Lifes: <span></span></div>
+    <div class="dashboard time">Time: <span></span></div>
+    <table class="game-board"></table>
+    <button class="restart none" onclick="restart()">Restart Game</button>
+    <div class="message"></div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>

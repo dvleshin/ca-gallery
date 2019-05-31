@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Ubuntu Regular';
+    src: url(./fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Ubuntu Bold';
+    src: url(./fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+
+body {
+    color: white;
+    text-align: center;
+    font-family: 'Ubuntu Regular';
+    background: url('../img/bg.svg') no-repeat;
+    background-size: cover;
+}
+
+table {
+    border: 1px solid;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid;
+    text-align: center;
+    font-family: 'Ubuntu Bold';
+}
+
+.button {
+    height: 70px;
+    width: 70px;
+    border: none;
+    background-color: blanchedalmond;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+
+
+.red {
+    background-color: #b2003d;
+}
+
+.dashboard {}
+
+.time {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+}
+
+.number {
+    vertical-align: top;
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+}
+
+.number span,
+.time span {
+    font-size: 30px;
+}
+
+.new-game-btn {
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    margin-top: 20px;
+    border-radius: 10px
+}
+
+.new-game-btn:hover {
+    color: white;
+}

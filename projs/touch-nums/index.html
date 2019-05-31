@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Touch numbers Games</title>
+</head>
+
+<body onload="init()">
+    <h1>Welcome to Numbers Games</h1>
+    <div class="levels">
+        <h3>Game Level</h3>
+        <input type="radio" name="level" onclick="isCheked(4)" checked>Easy (16)
+        <input type="radio" name="level" onclick="isCheked(5)">Hard (25)
+        <input type="radio" name="level" onclick="isCheked(6)">Extreame (36)
+    </div>
+    <div class="dashboard">
+        <div class="time">
+            <h3>Game Time</h3>
+            <span></span>
+        </div>
+        <div class="number">
+            <h3>Next Number</h3>
+            <span></span>
+        </div>
+    </div>
+    <div class="game-board"></div>
+
+    <button class="new-game-btn" onclick="newGame()">New Game</button>
+    <script src="js/game.js"></script>
+</body>
+
+</html>

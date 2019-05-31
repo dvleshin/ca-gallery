@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+header {
+    height: 100px;
+    text-align: center;
+}
+
+.table {
+    max-width: 800px;
+    background-color: #fff;
+}
+
+table img {
+    max-height: 150px;
+}
+
+.modal-body img {
+    max-width: 150px;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.rating {
+    margin: 0 30%;
+    padding: 20px;
+}
+
+.collapse button {
+    margin-bottom: 10px;
+}
+
+.update-price {
+    margin-top: 10px;
+}
+
+.update-price button {
+    margin-top: 10px;
+}
+
+.trans select {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 0.25em;
+    height: 38px;
+    border-color:#007bff;
+}

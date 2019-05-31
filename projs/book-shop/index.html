@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title data-trans="page-title">Online Books Shop</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 data-trans="h1">Book Shop</h1>
+        <div class="trans">
+                <select onchange="onSetLang(this.value)">
+                    <option value="en">English</option>
+                    <option value="he">עברית</option>
+                </select>
+            </div>
+    </header>
+    <main>
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseForm" role="button"
+                        aria-expanded="false" aria-controls="collapseForm" data-trans="create">
+                        Add new book
+                    </a>
+                </p>
+                <div class="collapse" id="collapseForm">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="inputBookName" data-trans="input-book-name"
+                            placeholder="Book's name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="inputBookPrice" data-trans="input-book-price"
+                            placeholder="Book's price">
+                    </div>
+                    <button class="btn btn-primary" onclick="readAndAddNewBook()" type="button"
+                        data-trans="add-book-btn">
+                        Add book
+                    </button>
+                </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col" data-trans="cover">Cover</th>
+                    <th scope="col" data-trans="title">Title</th>
+                    <th scope="col" data-trans="price">Price</th>
+                    <th scope="col" data-trans="actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- Modal -->
+        <div class="modal fade" id="bookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bookModalTitle">Book Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col" id="bookModalImg"></div>
+                        <div class="col" id="bookModalBody"></div>
+                        <div class="row rating">
+                            <div class="col-3"><button onclick="onRatingBook('minus')">-</button></div>
+                            <div class="col-6" id="bookRating">0</div>
+                            <div class="col-3"><button onclick="onRatingBook('plus')">+</button></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            data-trans="close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="js/books-controller.js"></script>
+    <script src="js/books-service.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="js/util-service.js"></script>
+</body>
+
+</html>
